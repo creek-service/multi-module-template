@@ -1,4 +1,4 @@
-<!-- ChangeMe: replace /template/ in the badge urls below with the name of the repo-->
+<!-- ChangeMe: replace /template in the badge urls below with the name of the repo-->
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![build](https://github.com/creek-service/template/actions/workflows/gradle.yml/badge.svg)](https://github.com/creek-service/template/actions/workflows/gradle.yml)
 [![Coverage Status](https://coveralls.io/repos/github/creek-service/template/badge.svg?branch=main)](https://coveralls.io/github/creek-service/template?branch=main)
@@ -34,15 +34,19 @@ The template sets up the following:
 ### Creating a new repo from the template
 
 1. Click the "Use this template" button on the main page and provide a name
-2. Customise the files in the new repo:
+2. Import the new repo into Coveralls.io and grab the `COVERALLS_REPO_TOKEN`,
+   setting this as a secret on the new repo.
+3. Customise the files in the new repo:
    1. Replace the `template` repo name with the name of the new project.
       Each place is marked with a `ChangeMe` comment. 
    2. Replace the [`example`](example) module with the repos first module.
    3. Replace this README.md
-   4. Commit changes.
-3. Configure the main branch for the new repo:
+   4. Commit changes as a PR (so you can test the PR build works!)
+4. Configure the main branch for the new repo:
    1. `build` and `coverage/coveralls` status checks are required before a PR can be merged.
    2. `Require approvals` is ticked.
+
+<< TODO:  Add steps to configure the new repo in Github....>>
 
 ### Gradle commands
 

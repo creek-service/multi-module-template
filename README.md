@@ -1,10 +1,10 @@
-<!-- ChangeMe: replace /template in the badge urls below with the name of the repo-->
+<!-- ChangeMe: replace /multi-module-template in the badge urls below with the name of the repo-->
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![build](https://github.com/creek-service/template/actions/workflows/gradle.yml/badge.svg)](https://github.com/creek-service/template/actions/workflows/gradle.yml)
-[![Coverage Status](https://coveralls.io/repos/github/creek-service/template/badge.svg?branch=main)](https://coveralls.io/github/creek-service/template?branch=main)
+[![build](https://github.com/creek-service/multi-module-template/actions/workflows/gradle.yml/badge.svg)](https://github.com/creek-service/multi-module-template/actions/workflows/gradle.yml)
+[![Coverage Status](https://coveralls.io/repos/github/creek-service/multi-module-template/badge.svg?branch=main)](https://coveralls.io/github/creek-service/multi-module-template?branch=main)
 
-# Template Repo
-Template repo used to create others
+# Multi-module template Repo
+Template repo used to create other multi-module repos.
 
 ## Features
 
@@ -36,7 +36,7 @@ The template sets up the following:
 1. Click the "Use this template" button on the main page and follow the instructions.
 2. Import the new repo into Coveralls.io
 3. Customise the files in the new repo:
-   1. Replace the `template` repo name with the name of the new project.
+   1. Replace the `multi-module-template` repo name with the name of the new repo.
       Each place is marked with a `ChangeMe` comment. 
    2. Replace the [`example`](example) module with the repos first module.
    3. Replace this README.md

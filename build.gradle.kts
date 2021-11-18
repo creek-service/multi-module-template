@@ -17,7 +17,7 @@ allprojects {
     apply(plugin = "com.diffplug.spotless")
     apply(plugin = "com.github.spotbugs")
 
-    group = "org.creek.template" // ChangeMe: replace template with appropriate name for the repo.
+    group = "org.creek"
 
     java {
         withSourcesJar()

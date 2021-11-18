@@ -29,5 +29,6 @@ jobs:
       run: ./gradlew check coveralls
     - name: Publish
       if: github.event_name == 'push'
-      run: ./gradlew release
-
+      run: |
+        git fetch --tags --unshallow
+        ./gradlew release

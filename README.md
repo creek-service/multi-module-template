@@ -11,23 +11,22 @@ Template repo used to create other multi-module repos.
 The template sets up the following:
 
 * Multi-module Gradle Java project, including:
-  * [Spotless][1] (code formatting)
-  * [Spotbugs][2] (static code analysis)
-  * [Checkstyle][3] (static code analysis)
-  * [Axion-release][4] (release versioning)
-  * [Jacoco][5] (code coverage analysis)
-  * [Coveralls.io][6] (code coverage tracking)
+  * Code formatting by [Spotless][1]
+  * Static code analysis by [Spotbugs][2] and [Checkstyle][3]
+  * Release versioning by the [Axion-release-plugin][4]
+  * Code coverage analysis by [Jacoco][5]
+  * Code coverage tracking by [Coveralls.io][6]
   * Default set of test dependencies:
     * [Unit5][7]
     * [Mockito][8]
     * [Hamcrest][9]
     * [Guava TestLib][10]
     * [Log4J 2.x][11]
-* Github build workflow, including:
+* GitHub build workflow, including:
   * Gradle build
   * [Coveralls.io][6] reporting
   * Release versioning
-* Github code owners and PR template.
+* GitHub code owners and PR template.
 
 ## Usage
 

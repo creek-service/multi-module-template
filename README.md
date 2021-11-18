@@ -34,27 +34,31 @@ The template sets up the following:
 ### Creating a new repo from the template
 
 1. Click the "Use this template" button on the main page and follow the instructions.
-2. Import the new repo into Coveralls.io
-3. Customise the files in the new repo:
-   1. Replace the `template` repo name with the name of the new project.
-      Each place is marked with a `ChangeMe` comment. 
-   2. Replace the [`example`](example) module with the repos first module.
-   3. Replace this README.md
-   4. Commit changes as a PR (so you can test the PR build works!)
-4. Customise the repo in GitHub `Settings`->:
+2. Import the new repo into Coveralls.io, noting the repo token.
+3. Customise the repo in GitHub `Settings`->:
    1. `Options`->
       1. `Merge Button`: 
          1. un-tick: `Allow merge commits` and `Allow rebase merging`.
          2. tick: `Allow auto-merging` and `Automatically delete head branches`
-   2. `Branches`->:
-      1. Protect the `main` branch:
-         1. Tick `Require a pull request before merging`
-            1. With `Require approvals` set to 1.
-         2. Tick `Require statuc checks to pass before merging`
-            1. With `Require branches to be up to date before merging`
-            2. With status checks `build` and `coverage/coveralls`.
-   3. `Secrets`->:
+   2. `Secrets`->:
       1. Add a new repository secret called `COVERALLS_REPO_TOKEN`, grabbing the value from Coveralls.io.,
+4. Customise the files in the new repo:
+    1. Replace the `template` repo name with the name of the new project.
+       Each place is marked with a `ChangeMe` comment.
+    2. Replace the [`example`](example) module with the repos first module.
+    3. Replace this README.md
+    4. Commit changes as a PR (so you can test the PR build works!)
+5. Finish customising the repo in GitHub `Settings`->`Branches` and protect the `main` branch:
+    1. Tick `Require a pull request before merging`
+       1. With `Require approvals` set to 1.
+    2. Tick `Require statuc checks to pass before merging`
+       1. With `Require branches to be up to date before merging`
+       2. With status checks `build` and `coverage/coveralls`.
+6. Finish customising the repo in Coveralls.io `Settings`->`Pull Request Alerts`:
+   1. Tick `Leave comments`
+   2. Set `COVERAGE THRESHOLD FOR FAILURE` to `80`%
+   3. Set `COVERAGE DECREASE THRESHOLD FOR FAILURE` to `1`%
+   4. Save changes.
 
 ### Gradle commands
 

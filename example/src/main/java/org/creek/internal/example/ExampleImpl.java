@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package org.creek.example;
+package org.creek.internal.example;
 
-public final class Example {
-    private Example() {}
 
-    public static boolean getTrue() {
+import org.creek.api.example.Example;
+
+public final class ExampleImpl implements Example {
+    @Override
+    public boolean getTrue() {
         return true;
     }
 }

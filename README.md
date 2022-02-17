@@ -35,11 +35,11 @@ The template sets up the following:
 1. Click the "Use this template" button on the main page and follow the instructions.
 2. Import the new repo into [Coveralls.io][12], noting the repo token.
 3. Customise the repo in GitHub `Settings`->:
-   1. `Options`->
-      1. `Merge Button`: 
+   1. `General`->
+      1. `Pull Requests`: 
          1. un-tick: `Allow merge commits` and `Allow rebase merging`.
-         2. tick: `Allow auto-merging` and `Automatically delete head branches`
-   2. `Secrets`->:
+         2. tick: `Always suggest updating pull request branches`, `Allow auto-merging` and `Automatically delete head branches`
+   2. `Secrets`->`Actions`:
       1. Add a new repository secret called `COVERALLS_REPO_TOKEN`, grabbing the value from Coveralls.io.,
 4. Customise the files in the new repo:
     1. Replace the `multi-module-template` repo name with the name of the new project.
@@ -50,9 +50,11 @@ The template sets up the following:
 5. Finish customising the repo in GitHub `Settings`->`Branches` and protect the `main` branch:
     1. Tick `Require a pull request before merging`
        1. With `Require approvals` set to 1.
-    2. Tick `Require statuc checks to pass before merging`
+    2. Tick `Dismiss stale pull request approvals when new commits are pushed`
+    3. Tick `Require status checks to pass before merging`
        1. With `Require branches to be up to date before merging`
        2. With status checks `build` and `coverage/coveralls`.
+    4. Click `Create`.
 6. Finish customising the repo in Coveralls.io `Settings`->`Pull Request Alerts`:
    1. Tick `Leave comments`
    2. Set `COVERAGE THRESHOLD FOR FAILURE` to `80`%

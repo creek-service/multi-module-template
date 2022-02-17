@@ -33,7 +33,7 @@ The template sets up the following:
 ### Creating a new repo from the template
 
 1. Click the "Use this template" button on the main page and follow the instructions.
-2. Import the new repo into Coveralls.io, noting the repo token.
+2. Import the new repo into [Coveralls.io][12], noting the repo token.
 3. Customise the repo in GitHub `Settings`->:
    1. `Options`->
       1. `Merge Button`: 
@@ -77,3 +77,4 @@ The template sets up the following:
 [9]: http://hamcrest.org/JavaHamcrest/index
 [10]: https://github.com/google/guava/tree/master/guava-testlib
 [11]: https://logging.apache.org/log4j/2.x/
+[12]: https://coveralls.io/

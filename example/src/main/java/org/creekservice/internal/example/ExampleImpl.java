@@ -14,20 +14,14 @@
  * limitations under the License.
  */
 
-package org.creek.internal.example;
+package org.creekservice.internal.example;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 
-import org.creek.api.example.Example;
-import org.junit.jupiter.api.Test;
+import org.creekservice.api.example.Example;
 
-class ExampleImplTest {
-
-    private final Example example = new ExampleImpl();
-
-    @Test
-    void shouldReturnTrue() {
-        assertThat(example.getTrue(), is(true));
+public final class ExampleImpl implements Example {
+    @Override
+    public boolean getTrue() {
+        return true;
     }
 }

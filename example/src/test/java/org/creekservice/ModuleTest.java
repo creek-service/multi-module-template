@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2022 Creek Contributors (https://github.com/creek-service)
+ * Copyright 2022 Creek Contributors (https://github.com/creek-service)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-package org.creek.internal.example;
+package org.creekservice;
 
 
-import org.creek.api.example.Example;
+import org.creekservice.api.test.conformity.ConformityTester;
+import org.junit.jupiter.api.Test;
 
-public final class ExampleImpl implements Example {
-    @Override
-    public boolean getTrue() {
-        return true;
+class ModuleTest {
+
+    @Test
+    void shouldConform() {
+        ConformityTester.test(ModuleTest.class);
     }
 }

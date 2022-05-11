@@ -14,10 +14,15 @@ project.version = scmVersion.version
 allprojects {
     apply(plugin = "idea")
     apply(plugin = "java")
-    apply(plugin = "jacoco")
     apply(plugin = "checkstyle")
     apply(plugin = "com.diffplug.spotless")
     apply(plugin = "com.github.spotbugs")
+
+    configure(subprojects) {
+        if (!name.startsWith("test-")) {
+            apply(plugin = "jacoco")
+        }
+    }
 
     group = "org.creekservice"
 
@@ -145,24 +150,26 @@ subprojects {
         dependsOn("checkstyleMain", "checkstyleTest", "spotbugsMain", "spotbugsTest")
     }
 
-    publishing {
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/creek-service/${rootProject.name}")
-                credentials {
-                    username = System.getenv("GITHUB_ACTOR")
-                    password = System.getenv("GITHUB_TOKEN")
+    if (!project.name.startsWith("test-")) {
+        publishing {
+            repositories {
+                maven {
+                    name = "GitHubPackages"
+                    url = uri("https://maven.pkg.github.com/creek-service/${rootProject.name}")
+                    credentials {
+                        username = System.getenv("GITHUB_ACTOR")
+                        password = System.getenv("GITHUB_TOKEN")
+                    }
                 }
             }
-        }
-        publications {
-            create<MavenPublication>("maven") {
-                from(components["java"])
-                artifactId = "${rootProject.name}-${project.name}"
+            publications {
+                create<MavenPublication>("maven") {
+                    from(components["java"])
+                    artifactId = "${rootProject.name}-${project.name}"
 
-                pom {
-                    url.set("https://github.com/creek-service/${rootProject.name}.git")
+                    pom {
+                        url.set("https://github.com/creek-service/${rootProject.name}.git")
+                    }
                 }
             }
         }

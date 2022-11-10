@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2022 Creek Contributors (https://github.com/creek-service)
+ * Copyright 2022 Creek Contributors (https://github.com/creek-service)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,17 @@
  * limitations under the License.
  */
 
-package org.creekservice.api.example;
+/**
+ * Standard configuration of Java Module Platform System, a.k.a. Java 9 modules.
+ *
+ * <p>Apply to all modules that publish JPMS modules.
+ */
 
-/** Example type */
-public interface Example {
+plugins {
+    java
+    id("org.javamodularity.moduleplugin")
+}
 
-    /** @return {@code true} */
-    boolean getTrue();
+java {
+    modularity.inferModulePath.set(false)
 }

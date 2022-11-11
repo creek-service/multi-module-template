@@ -69,6 +69,7 @@ The template sets up the following:
    2. Set `COVERAGE THRESHOLD FOR FAILURE` to `80`%
    3. Set `COVERAGE DECREASE THRESHOLD FOR FAILURE` to `1`%
    4. Save changes.
+7. Use the "Set next version" GitHub workflow to set the next version inline with other Creek repos.
 
 ### Gradle commands
 

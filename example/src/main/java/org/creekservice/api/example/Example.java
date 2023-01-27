@@ -20,6 +20,8 @@ package org.creekservice.api.example;
 public interface Example {
 
     /**
+     * Example method.
+     * 
      * @return {@code true}
      */
     boolean getTrue();

@@ -21,7 +21,7 @@ public interface Example {
 
     /**
      * Example method.
-     * 
+     *
      * @return {@code true}
      */
     boolean getTrue();

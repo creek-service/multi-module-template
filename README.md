@@ -75,6 +75,11 @@ The template sets up the following:
    4. Save changes.
 7. Use the "Set next version" GitHub workflow to set the next version inline with other Creek repos.
 
+## Modules in this repository
+
+<!-- ChangeMe: update the module list and javadoc links -->
+* **[example](example)** [[JavaDocs](https://javadoc.io/doc/org.creekservice/multi-module-template-example)]: example module
+
 ### Gradle commands
 
 * `./gradlew format` will format the code using [Spotless][1].

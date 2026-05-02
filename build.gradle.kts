@@ -47,7 +47,7 @@ subprojects {
     }
 
     extra.apply {
-        set("creekVersion", "0.4.4-SNAPSHOT")
+        set("creekVersion", "0.4.4")
         set("spotBugsVersion", "4.6.0")         // https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs-annotations
 
         set("log4jVersion", "2.25.4")           // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
